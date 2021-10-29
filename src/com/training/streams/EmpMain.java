@@ -9,7 +9,7 @@ public class EmpMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-         // add 5 employees to list
+		// add 5 employees to list
 
 		System.out.println("Employee Names ");
 		List<Employee> empList = Arrays.asList(new Employee(1, "Kee", "Bangalore"), new Employee(2, "Dora", "Chennai"),
@@ -51,19 +51,19 @@ public class EmpMain {
 
 		// print one employee by id, if not available throw runtime- stream, filter,
 		// findFirst,orelsethrow
-		
+
 		System.out.println("print one employee id ");
 		try {
 			Employee empid = empList.stream().filter(empl -> empl.getEmpid() == 1).findFirst()
 					.orElseThrow(() -> new Exception("Not found"));
-			System.out.println( empid);
+			System.out.println(empid);
 
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 
 		System.out.println();
-		
+
 		// print all employee names that start with K , if not available print ("not in
 		// first place") stream, filter, findFirst,orelse
 
